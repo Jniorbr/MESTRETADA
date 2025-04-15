@@ -84,4 +84,51 @@ async function exercicio6() {
   }
 }
 
+async function exercicio7() {
+}
+async function exercicio8() {
+}
+async function exercicio9() {
+}
+async function exercicio10() {
+}
+async function exercicio11() {
+}
+async function exercicio12() {
+}
+async function exercicio13() {
+}
+async function exercicio14() {
+}
+async function exercicio15() {
+}
+async function exercicio16() {
+}
+async function exercicio17() {
+}
+async function exercicio18() {
+}
+async function exercicio19() {
+}
+async function exercicio20() {
+}
+async function exercicio21() {
+}
+async function exercicio22() {
+}
+async function exercicio23() {
+}
+async function exercicio24() {
+}
+async function exercicio25() {
+}
+async function exercicio26() {
+}
+async function exercicio27() {
+}
+async function exercicio28() {
+}
+async function exercicio29() {
+}
+
 exercicio6();
