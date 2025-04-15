@@ -79,9 +79,134 @@ async function exercicio6() {
     if (n2 > n1 && n2 > n3) {
       console.log("O número maior é", n2);
     } else {
-      console.log("O número maior é ", n3);
+      console.log("O número maior é", n3);
     }
   }
 }
 
-exercicio6();
+async function exercicio7() {
+  const n1 = await prompt("Insira o primeiro número:");
+  const n2 = await prompt("Insira o segundo número:");
+  const n3 = await prompt("Insira o terceiro número:");
+
+  if (n1 > n2 && n1 > n3) {
+    if (n2 > n3) {
+      console.log("O número maior é", n1, "e o número menor é", n3);
+    } else { console.log("O número maior é", n1, "e o número menor é", n2) }
+  }
+  else {
+    if (n2 > n3) {
+      if (n3 > n1) {
+        console.log("O número maior é", n2, "e o número menor é", n1)
+      }
+      else {
+        console.log("O número maior é", n2, "e o número menor é", n3)
+      }
+    } if (n1 > n2) {
+      console.log("O número maior é", n3, "e o número menor é", n2)
+    } else { console.log("O número maior é", n3, "e o número menor é", n1) }
+  }
+}
+async function exercicio8() {
+  const p1 = await prompt("Insira o preço do primeiro produto:");
+  const p2 = await prompt("Insira o preço do segundo produto:");
+  const p3 = await prompt("Insira o preço do terceiro produto:");
+
+  if (p1 < p2 && p1 < p3) {
+    console.log("O produto 1 tem menor valor")
+  } else {
+    if (p2 < p3 && p2 < p3) {
+      console.log("O produto 2 tem menor valor")
+    }
+    else {
+      console.log("O produto 3 tem menor valor")
+    }
+  }
+}
+async function exercicio9() {
+  const n1 = await prompt("Insira o primeiro número:");
+  const n2 = await prompt("Insira o segundo número:");
+  const n3 = await prompt("Insira o terceiro número:");
+
+  let maior = n1
+  let meio = n2
+  let menor = n3
+  
+ if (n1>n2 && n1>n3) {
+  if (n2>n3) {
+    let maior = n1
+    let meio = n2
+    let menor = n3
+  } else {
+    let maior = n1
+    let meio = n3
+    let menor = n2
+  }
+  
+ }
+ else{
+  if (n2>n1 && n2>n3) {
+    if (n1>n3) {
+      let maior = n2
+      let meio = n1
+      let menor = n3
+    }
+    else {
+      let maior = n2
+      let meio = n3
+      let menor = n1
+    }
+  }if (n1>n2) {
+    let maior = n3
+    let meio = n1
+    let menor = n2
+  }else {
+    let maior = n3
+    let meio = n2
+    let menor = n1
+  }
+  console.log ("Número maior =",maior , " , número meio =",meio , ", número menor =",menor)
+ }
+}
+async function exercicio10() {
+}
+async function exercicio11() {
+}
+async function exercicio12() {
+}
+async function exercicio13() {
+}
+async function exercicio14() {
+}
+async function exercicio15() {
+}
+async function exercicio16() {
+}
+async function exercicio17() {
+}
+async function exercicio18() {
+}
+async function exercicio19() {
+}
+async function exercicio20() {
+}
+async function exercicio21() {
+}
+async function exercicio22() {
+}
+async function exercicio23() {
+}
+async function exercicio24() {
+}
+async function exercicio25() {
+}
+async function exercicio26() {
+}
+async function exercicio27() {
+}
+async function exercicio28() {
+}
+async function exercicio29() {
+}
+
+exercicio9();
