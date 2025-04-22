@@ -11,7 +11,7 @@ async function exercicio1() {
 async function exercicio2() {
   const n1 = await prompt("Insira um número: ");
 
-  console.log(`O número ${n1} é:` , n1 > 0 ? "positivo" : "negativo");  
+  console.log(`O número ${n1} é:`, n1 > 0 ? "positivo" : "negativo");
 }
 
 async function exercicio3() {
@@ -21,10 +21,10 @@ async function exercicio3() {
     case "m":
       console.log("Masculino");
       break;
-      case "f":
+    case "f":
       console.log("Feminino");
       break;
-    
+
     default:
       console.log("É gaysaço!!");
       break;
@@ -163,25 +163,148 @@ async function exercicio9() {
     menor
   );
 }
-async function exercicio10() {}
-async function exercicio11() {}
-async function exercicio12() {}
-async function exercicio13() {}
-async function exercicio14() {}
-async function exercicio15() {}
-async function exercicio16() {}
-async function exercicio17() {}
-async function exercicio18() {}
-async function exercicio19() {}
-async function exercicio20() {}
-async function exercicio21() {}
-async function exercicio22() {}
-async function exercicio23() {}
-async function exercicio24() {}
-async function exercicio25() {}
-async function exercicio26() {}
-async function exercicio27() {}
-async function exercicio28() {}
-async function exercicio29() {}
+async function exercicio10() {
+  const letra = await prompt("Insira seu turno: ");
+  letra == letra.toLowerCase()
+  if (letra == "m") {
+    console.log("Buenos dias muchacho!")
+  } else {
+    if (letra == "v") {
+      console.log("buenas tardes muchacho!")
+    } else
+      if (letra == "n") {
+        console.log("おやすみ")
+      } else {
+        console.log("Valor inválido")
+      }
+  }
+}
 
-exercicio3();
+async function exercicio11() {
+  const salario = await prompt("Insira seu salário:");
+  let porcentagem = 5;
+  let reajuste = salario * (porcentagem / 100)
+  let novosalario = parseFloat(salario) + reajuste
+  if (salario <= 280) {
+    porcentagem = 20;
+  } else if (salario <= 700) {
+    porcentagem = 15;
+  } else if (salario <= 1500) {
+    porcentagem = 10;
+  }
+  console.log("Salário antigo =", "R$", salario)
+  console.log("Porcentagem de aumento =", porcentagem, "%")
+  console.log("Salário atualizado = R$", novosalario)
+}
+async function exercicio12() {
+  const valorhoras = await prompt("Insira o valor da sua hora :");
+  const horas = await prompt("Insira a quantidade de horas trabalhadas :");
+  let salariobruto = parseFloat(valorhoras) * parseFloat(horas)
+  let porcentagemir = 20;
+  let ir = salariobruto * (porcentagemir / 100);
+  let inss = salariobruto * 0.1;
+  let fgts = salariobruto * 0.11;
+  let descontos = inss + ir;
+  let salarioliquido = salariobruto - descontos;
+
+  if (salariobruto <= 900) {
+    porcentagemir = 0;
+  } else if (salariobruto <= 1500) {
+    porcentagemir = 5;
+  } else if (salariobruto <= 2500) {
+    porcentagemir = 10;
+  }
+  console.log("Salario bruto = R$", salariobruto);
+  console.log(` (-) IR = (${porcentagemir + "%"})  = R$`, ir);
+  console.log(" (-) INSS (10%) = R$", inss);
+  console.log("FGTS (11%) = R$", fgts);
+  console.log("Total de descontos = R$", descontos);
+  console.log("Salário Líquido = R$", salarioliquido);
+}
+async function exercicio13() {
+  const n1 = await prompt("Insira o dia :")
+  switch (n1) {
+    case "1":
+      console.log("Domingo");
+      break;
+    case "2":
+      console.log("Segunda");
+      break;
+    case "3":
+      console.log("Terça");
+      break;
+    case "4":
+      console.log("Quarta")
+      break;
+    case "5":
+      console.log("Quinta")
+      break;
+    case "6":
+      console.log("Sexta")
+      break;
+    case "7":
+      console.log("Sábado");
+      break;
+    default:
+      console.log("Valor inválido");
+      break;
+  }
+}
+async function exercicio14() {
+  const n1 = await prompt("Insira a primeira média: ");
+  const n2 = await prompt("Insira a segunda média: ");
+
+  const media = (parseFloat(n1) + parseFloat(n2)) / 2;
+  let conceito = "E"
+  if (media >= 9) {
+    conceito = "A"
+  } else if (media >= 7.5) {
+    conceito = "B"
+  } else if (media >= 6) {
+    conceito = "C"
+  } else if (media >= 4) {
+    conceito = "D"
+  }
+  console.log("A média do aluno foi =", media);
+  console.log("Com conceito =", conceito);
+}
+async function exercicio15() {
+  const n1 = await prompt("Insira a primeira média: ");
+  const n2 = await prompt("Insira a segunda média: ");
+
+  const media = (parseFloat(n1) + parseFloat(n2)) / 2;
+  let conceito = "E"
+  let resultado = "REPROVADO"
+  if (media >= 9) {
+    conceito = "A"
+    resultado = "APROVADO"
+  } else if (media >= 7.5) {
+    conceito = "B"
+    resultado = "APROVADO"
+  } else if (media >= 6) {
+    conceito = "C"
+    resultado = "APROVADO"
+  } else if (media >= 4) {
+    conceito = "D"
+  }
+  console.log("A média do aluno foi =", media);
+  console.log("Com conceito =", conceito);
+  console.log("O aluno foi", resultado);
+}
+async function exercicio16() {
+}
+async function exercicio17() { }
+async function exercicio18() { }
+async function exercicio19() { }
+async function exercicio20() { }
+async function exercicio21() { }
+async function exercicio22() { }
+async function exercicio23() { }
+async function exercicio24() { }
+async function exercicio25() { }
+async function exercicio26() { }
+async function exercicio27() { }
+async function exercicio28() { }
+async function exercicio29() { }
+
+exercicio15();
