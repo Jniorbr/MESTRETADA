@@ -292,8 +292,49 @@ async function exercicio15() {
   console.log("O aluno foi", resultado);
 }
 async function exercicio16() {
+  const l1 = await Number(prompt("Insira o primeiro lado do seu Triângulo :"));
+  const l2 = await Number(prompt("Insira o segundo lado do seu Triângulo :"));
+  const l3 = await Number(prompt("Insira o terceiro lado do seu Triângulo :"));
+  let triangulo = "Dado inválido"
+
+  if ((l1 + l2) >= l3 & (l1 + l3) >= l2 & (l2 + l3) >= l1) {
+    if (l1 == l2) {
+      if (l2 == l3) {
+        triangulo = "Triângulo Equilátero."
+      } else {
+        triangulo = "Triângulo Isósceles."
+      }
+    } else if (l1 == l3) {
+      triangulo = "Triângulo Isósceles."
+    } else if (l2 == l3) {
+      triangulo = "Triângulo Isósceles."
+    } else {
+      triangulo = "Triângulo Escaleno."
+    }
+  } else { }
+  console.log(triangulo);
 }
-async function exercicio17() { }
+async function exercicio17() {
+  const a = await Number(prompt("Insira o valor de A"));
+  if (a == 0) {
+    console.log("Não é uma equação do segundo grau , encerrando programa");
+  } else {
+    const b = await Number(prompt("Insira o valor de B"));
+    const c = await Number(prompt("Insira o valor de C"));
+    const delta = (b * b) - (4 * a * c)
+    const raiz = Math.sqrt(delta);
+    const raizbaixo = 2 * a;
+    const x1 = (-b + raiz) / raizbaixo;
+    const x2 = (-b - raiz) / raizbaixo;
+    if (delta < 0) {
+      console.log("O valor de delta é ", delta, " , não é uma equação do segundo grau. Encerrando programa")
+    } else if (x1 == x2) {
+      console.log("A expressão possui apenas uma raiz real e é = ", x1)
+    } else
+      console.log("A raiz 1 da equação é ", x1);
+    console.log("A raiz 2 da equação é ", x2);
+  }
+}
 async function exercicio18() { }
 async function exercicio19() { }
 async function exercicio20() { }
@@ -307,4 +348,4 @@ async function exercicio27() { }
 async function exercicio28() { }
 async function exercicio29() { }
 
-exercicio15();
+exercicio17();
