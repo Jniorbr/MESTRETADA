@@ -315,7 +315,7 @@ async function exercicio16() {
   console.log(triangulo);
 }
 async function exercicio17() {
-  const a = await Number(prompt("Insira o valor de A"));
+  const a = await Number(prompt("Insira o valor de A")); ''
   if (a == 0) {
     console.log("Não é uma equação do segundo grau , encerrando programa");
   } else {
@@ -335,7 +335,24 @@ async function exercicio17() {
     console.log("A raiz 2 da equação é ", x2);
   }
 }
-async function exercicio18() { }
+async function exercicio18() {
+  const ano = await Number(prompt("Insira o ano :"));
+
+  const quatro = ano % 4
+  const cem = ano % 100
+  const quatrocentos = ano % 400
+  let resultado = " não é bissexto."
+
+  if (quatro == 0) {
+    if (cem == 0) {
+      if (quatrocentos == 0) {
+        resultado = " é bissexto."
+      }
+    } else
+      resultado = " é bissexto."
+  } else
+  console.log("O ano de ", ano, resultado);
+}
 async function exercicio19() { }
 async function exercicio20() { }
 async function exercicio21() { }
@@ -348,4 +365,4 @@ async function exercicio27() { }
 async function exercicio28() { }
 async function exercicio29() { }
 
-exercicio17();
+exercicio18();
