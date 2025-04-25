@@ -354,7 +354,7 @@ async function exercicio18() {
     } else
       resultado = "é bissexto."
   }
-    console.log("O ano de", ano, resultado);
+  console.log("O ano de", ano, resultado);
 }
 async function exercicio19() {
   const n1 = await prompt("Insira um número inteiro ");
@@ -366,15 +366,176 @@ async function exercicio19() {
   }
   console.log("O número :", n1, " ele é ", result);
 }
-async function exercicio20() { }
-async function exercicio21() { }
-async function exercicio22() { }
-async function exercicio23() { }
-async function exercicio24() { }
-async function exercicio25() { }
-async function exercicio26() { }
-async function exercicio27() { }
-async function exercicio28() { }
-async function exercicio29() { }
+async function exercicio20() {
+  const n1 = await prompt("Digite o primeiro número inteiro : ");
+  const n2 = await prompt("Digite o segundo número inteiro  : ");
+  const op = await prompt("Qual operação deseja realizar ? (soma,subtracao,multiplicacao ou divisao) : ");
+  let result = (parseFloat(n1) / parseFloat(n2)) * 0
+  op == op.toLowerCase()
 
-exercicio18();
+  if (op == "soma") {
+    result = parseFloat(n1) + parseFloat(n2)
+  } else if (op == "subtracao") {
+    result = parseFloat(n1) - parseFloat(n2)
+  } else if (op == "multiplicacao") {
+    result = parseFloat(n1) * parseFloat(n2)
+  } else if (op == "divisao") {
+    result = parseFloat(n1) / parseFloat(n2)
+  } else { }
+  let num1 = "ímpar"
+  let num2 = "negativo"
+  let rest = result % 2
+  if (rest == 0) {
+    num1 = "par"
+  } if (result >= 0) {
+    num2 = "positivo"
+  }
+  console.log("O resultado da operação é = ", result);
+  console.log("É um número", num1, ",e um número", num2);
+}
+async function exercicio21() {
+  console.log("Responda com SIM OU NAO");
+  const fone = await prompt("Telefonou para a vítima?");
+  let result = 0
+  let suspect = "Inocente"
+  if (fone == "sim" || "SIM ") {
+    result = result + 1
+  }
+  const local = await prompt("Esteve no local do crime?");
+  if (local == "sim" || "SIM ") {
+    result = result + 1
+  }
+  const mora = await prompt("Mora perto da vítima?");
+  if (mora == "sim" || "SIM ") {
+    result = result + 1
+  }
+  const devia = await prompt("Devia para a vítima?");
+  if (devia == "sim" || "SIM ") {
+    result = result + 1
+  }
+  const trabalha = await prompt("Já trabalhou com a vítima?");
+  if (trabalha == "sim" || "SIM ") {
+    result = result + 1
+  } if (result >= 5) {
+    suspect = "Assassino!!!!!"
+  } else if (result >= 3) {
+    suspect = "Cúmpliceeeeee"
+  } else if (result > 1) {
+    suspect = "Suspeito otário"
+  } else { }
+  console.log(suspect);
+}
+async function exercicio22() {
+  const litros = await prompt("Insira quantos litros vendidos: ");
+  const comb = await prompt("Insira 'A' para álcool ou 'G' para gasolina: ");
+  let desconto = 0;
+  let result = "Selecione uma opção de combustivel válida";
+  comb == comb.toLocaleLowerCase();
+
+  if (comb == "a") {
+    if (litros >= 20) {
+      desconto = 0.05
+    } else { desconto = 0.03 }
+    let comdesconto = parseFloat(litros) * desconto
+    let diferenca = parseFloat(litros) - comdesconto
+    result = `O valor pago de diferença é , ${diferenca} litros`;
+  } else if (comb == "g") {
+    if (litros >= 20) {
+      desconto = 0.06
+    } else { desconto = 0.04 }
+    let comdesconto = parseFloat(litros) * desconto
+    let diferenca = parseFloat(litros) - comdesconto
+    result = `O valor pago de diferença é , ${diferenca} litros`;
+  } else { }
+  console.log(result);
+}
+async function exercicio23() {
+  const n1 = await prompt("Insira o primeiro número: ");
+  const n2 = await prompt("Insira o segundo número: ");
+
+  console.log("O numero maior é:", (n1 > n2) ? n1 : n2);
+  console.log("O numero menor é:", (n1 > n2) ? n2 : n1);
+}
+async function exercicio24() {
+  const n1 = await prompt("Insira o primeiro número:");
+  const n2 = await prompt("Insira o segundo número:");
+  const n3 = await prompt("Insira o terceiro número:");
+  let maior = n1
+  let meio = n2
+  let menor = n3
+
+  n1 < n2 && n1 < n3 ? menor = n1 : 0;
+  n2 < n1 && n2 < n3 ? menor = n2 : 0;
+  n2 > n1 && n2 > n3 ? maior = n2 : 0;
+  n3 > n1 && n3 > n2 ? maior = n3 : 0;
+
+  console.log("O número maior é ", maior, " e o menor é ", menor);
+}
+async function exercicio25() {
+  const n1 = await prompt("Insira um número:");
+  const result = parseFloat(n1) % 2;
+  console.log(`O número ${n1} é :`, result == 0 ? "par" : "ímpar");
+}
+async function exercicio26() {
+  const raio = await prompt("Qual o RAIO da circunferência ? ");
+  const dia = 2 * raio
+  const comp = 2 * Math.PI * raio
+  const area = (raio * raio) * Math.PI
+  console.log("O diâmetro dessa circunferência é ", dia);
+  console.log("O comprimento dessa circunferência é ", comp);
+  console.log("A área dessa circunferência é ", area);
+}
+async function exercicio27() {
+  const age = await prompt("Insira sua idade ? ")
+  console.log(age > 18 && age < 67 ? "Você pode doar sangue (mas não deveria)" : "Você não pode doar sangue (idade permitada para doar entre 18 e 67 anos)")
+}
+async function exercicio28errado() {
+  console.log("Insira a data do seu nascimento!");
+  const dia = await prompt("Digite o dia: ")
+  const mes = await prompt("Digite o mês: ")
+  const ano = await prompt("Digite o ano: ")
+  let data = "a";
+  let motivodia = "";
+  let motivomes = "";
+  let motivoano = "";
+
+  dia > 0 && dia < 32 ? 0 : data = "data inválida", motivodia = ",o mês possui 1 a 31 dias";
+  mes > 0 && mes <= 12 ? 0 : data = "data inválida", motivomes = " ,o ano possui no máximo 12 meses";
+  ano <= 2013 ? data = "Data válida" : data = "data inválida", motivoano = " ,estamos no ano de 2013 e o valor informado foi maior "
+  console.log(dia , "/" , mes , "/" , ano , " é " , data , " " , motivodia , motivomes , motivoano, ".");
+}
+async function exercicio28() {
+  console.log("Insira a data do seu nascimento!");
+  const dia = await prompt("Digite o dia: ")
+  const mes = await prompt("Digite o mês: ")
+  const ano = await prompt("Digite o ano: ")
+  let data = "a";
+  let motivodia = "";
+  let motivomes = "";
+  let motivoano = "";
+
+  if (dia > 0 && dia < 32) {
+   data = "data válida"
+  } else  {
+    data = "data inválida", motivodia = ",o mês possui 1 a 31 dias";
+  } if (mes > 0 && mes <= 12) {}
+  else {
+    data = "data inválida", motivomes = " ,o ano possui no máximo 12 meses";
+  } if (ano <= 2013) {}
+  else {
+    data = "data inválida", motivoano = " ,estamos no ano de 2013 e o valor informado foi maior "
+  }
+  console.log(dia , "/" , mes , "/" , ano , " é " , data , " " , motivodia , motivomes , motivoano, ".");
+}
+async function exercicio29() { 
+  const x = await prompt("Insira um valor para X: ")
+  const y = await prompt("Insira um valor para Y: ")
+  let a = x
+  let b = y
+  console.log(`X  = ${a} Y = ${b}`);
+  a = y
+  b = x
+  console.log(`X  = ${a} Y = ${b}`);
+}
+
+exercicio29();
