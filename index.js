@@ -315,12 +315,12 @@ async function exercicio16() {
   console.log(triangulo);
 }
 async function exercicio17() {
-  const a = await Number(prompt("Insira o valor de A")); ''
+  const a = await prompt("Insira o valor de A :");
   if (a == 0) {
     console.log("Não é uma equação do segundo grau , encerrando programa");
   } else {
-    const b = await Number(prompt("Insira o valor de B"));
-    const c = await Number(prompt("Insira o valor de C"));
+    const b = await prompt("Insira o valor de B :");
+    const c = await prompt("Insira o valor de C :");
     const delta = (b * b) - (4 * a * c)
     const raiz = Math.sqrt(delta);
     const raizbaixo = 2 * a;
@@ -328,32 +328,44 @@ async function exercicio17() {
     const x2 = (-b - raiz) / raizbaixo;
     if (delta < 0) {
       console.log("O valor de delta é ", delta, " , não é uma equação do segundo grau. Encerrando programa")
-    } else if (x1 == x2) {
-      console.log("A expressão possui apenas uma raiz real e é = ", x1)
-    } else
-      console.log("A raiz 1 da equação é ", x1);
-    console.log("A raiz 2 da equação é ", x2);
+    } else {
+      if (x1 == x2) {
+        console.log("A expressão possui apenas uma raiz real e é = ", x1)
+      } else {
+        console.log("A raiz 1 da equação é ", x1);
+        console.log("A raiz 2 da equação é ", x2);
+      }
+    }
   }
 }
 async function exercicio18() {
-  const ano = await Number(prompt("Insira o ano :"));
+  const ano = await prompt("Insira o ano :");
 
-  const quatro = ano % 4
-  const cem = ano % 100
-  const quatrocentos = ano % 400
-  let resultado = " não é bissexto."
+  const quatro = ano % 4;
+  const cem = ano % 100;
+  const quatrocentos = ano % 400;
+  let resultado = "não é bissexto.";
 
   if (quatro == 0) {
     if (cem == 0) {
       if (quatrocentos == 0) {
-        resultado = " é bissexto."
+        resultado = "é bissexto."
       }
     } else
-      resultado = " é bissexto."
-  } else
-  console.log("O ano de ", ano, resultado);
+      resultado = "é bissexto."
+  }
+    console.log("O ano de", ano, resultado);
 }
-async function exercicio19() { }
+async function exercicio19() {
+  const n1 = await prompt("Insira um número inteiro ");
+  const resto = parseFloat(n1) % 2;
+  let result = "ÌMPAR";
+
+  if (resto == 0) {
+    result = "PAR";
+  }
+  console.log("O número :", n1, " ele é ", result);
+}
 async function exercicio20() { }
 async function exercicio21() { }
 async function exercicio22() { }
