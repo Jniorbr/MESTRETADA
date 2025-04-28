@@ -399,19 +399,19 @@ async function exercicio21() {
   let result = 0
   let suspect = "Inocente"
   if (fone == "sim" || "SIM ") {
-    result = result + 1
-  }
+    result + 1
+  } 
   const local = await prompt("Esteve no local do crime?");
   if (local == "sim" || "SIM ") {
-    result = result + 1
+    result + 1
   }
   const mora = await prompt("Mora perto da vítima?");
   if (mora == "sim" || "SIM ") {
-    result = result + 1
+    result + 1
   }
   const devia = await prompt("Devia para a vítima?");
   if (devia == "sim" || "SIM ") {
-    result = result + 1
+    result + 1
   }
   const trabalha = await prompt("Já trabalhou com a vítima?");
   if (trabalha == "sim" || "SIM ") {
@@ -538,4 +538,4 @@ async function exercicio29() {
   console.log(`X  = ${a} Y = ${b}`);
 }
 
-exercicio29();
+exercicio21();
